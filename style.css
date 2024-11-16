@@ -1,0 +1,111 @@
+.container{
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #49371A;
+    width: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clock{
+    position: relative;
+    border: 15px solid #916A2F;
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.glass{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    height: 65vh;
+    width: 50vh;
+}
+.gong{
+    position: absolute;
+    border: 8px solid #916A2F;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    height: 50vh;
+    background-color: #916A2F;
+    transform-origin: top center;
+    transform: translate(-50%, 0);
+    margin-top: 51vh;
+    animation: pendulum-swing 2s infinite ease-in-out;
+}
+
+.ball {
+    position: absolute;
+    bottom: -20px; 
+    left: 50%;
+    width: 60px; 
+    height: 60px; 
+    background-color: rgb(164, 156, 8); 
+    border-radius: 50%; 
+    transform: translateX(-50%);
+}
+.number {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: gold;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.second-hand {
+    position: absolute;
+    width: 0.3vh; 
+    height: 20vh; 
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center; 
+    transform: translate(-50%, -100%) rotate(0deg); 
+    border-radius: 1px;
+}
+.minute-hand {
+    position: absolute;
+    width: 1vh; 
+    height: 20vh; 
+    background-color: goldenrod;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center; 
+    transform: translate(-50%, -100%) rotate(0deg); 
+    border-radius: 5px;
+}
+
+.hour-hand {
+    position: absolute;
+    width: 1vh; 
+    height: 10vh; 
+    background-color: goldenrod;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center; 
+    transform: translate(-50%, -100%) rotate(0deg); 
+    border-radius: 5px;
+}
+
+@keyframes pendulum-swing {
+    0% {
+        transform: translate(-50%, -100%) rotate(-15deg); /* Start left */
+    }
+    50% {
+        transform: translate(-50%, -100%) rotate(15deg);  /* Go right */
+    }
+    100% {
+        transform: translate(-50%, -100%) rotate(-15deg); /* Back to left */
+    }
+}
+
