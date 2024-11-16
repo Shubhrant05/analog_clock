@@ -6,7 +6,7 @@ const gong = document.getElementsByClassName(".gong")
 
 function addNumbers() {
   const clockRadius = window.innerHeight * 0.25; // Radius of the clock in px
-  const numberRadius = clockRadius - 15; // Adjust radius for number positioning
+  const numberRadius = clockRadius - (0.02 * window.innerHeight); // Adjust radius for number positioning
   const centerX = clockRadius;
   const centerY = clockRadius;
 
